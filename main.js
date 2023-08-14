@@ -16,6 +16,14 @@ document.addEventListener("keypress", (e) => {
     newColourScheme()
 });
 
+let agespan = document.getElementById("age");
+let delta = new Date() - new Date(2009, 03, 20);
+
+setInterval(() => {
+    agespan.innerHTML = `${(delta / (1000 * 60 * 60 * 24 * 365)).toFixed("8")}`;
+    delta += 100;
+}, 100);
+
 let navbar = document.querySelector(".navbar");
 
 let callback = (entries, observer) => {
