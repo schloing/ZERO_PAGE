@@ -58,6 +58,11 @@ body {
     text-align: center;
 }
 
+#joke {
+    width: 725px;
+    height: 1rem;
+}
+
 .navbar {
     width: calc(50% - 2rem);
     height: 2.5rem;
@@ -92,10 +97,16 @@ a,
     /* apple classic colourscheme. thanks steve */
     background: var(--rainbow) !important;
     -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
     font-size: 3rem !important;
     padding: 0 !important;
-    -webkit-text-fill-color: transparent;
     font-weight: bold;
+    transition: background-position 500ms;
+}
+
+.logo1:hover {
+    background-position: 5rem !important;
+    cursor: crosshair;
 }
 
 .sidebar .logo, .logo1 {
@@ -118,7 +129,7 @@ a,
 
 #content {
     display: grid;
-    width: 80%;
+    width: 60%;
     margin: 6rem auto 0 auto;
     grid-template-columns: 1fr 2fr;
     justify-content: space-evenly;
@@ -129,20 +140,17 @@ a,
 .sidebar,
 .content {
     text-align: left;
-    padding: 2.5rem;
     height: 100%;
-    font-size: 1.5rem;
+    text-wrap: balance;
 }
 
 ul {
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
-    height: 100%;
-    /* height: 15rem; */
-    margin: 5rem 0 3rem 0;
+    height: 50%;
     padding: 0;
 }
 
@@ -163,4 +171,5 @@ li > a {
     background-clip: text;
     -webkit-background-clip: text !important;
     color: transparent;
+    transition: 100ms;
 }

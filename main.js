@@ -1,3 +1,5 @@
+// random colour scheme generator
+
 const root = document.documentElement;
 
 const offset = 120;
@@ -16,6 +18,8 @@ document.addEventListener("keypress", (e) => {
     newColourScheme()
 });
 
+// age showcase thing
+
 let agespan = document.getElementById("age");
 let delta = new Date() - new Date(2009, 03, 20);
 
@@ -24,15 +28,16 @@ setInterval(() => {
     delta += 100;
 }, 100);
 
+// floating navbar scroll effect
+
 let navbar = document.querySelector(".navbar");
 
 let callback = (entries, observer) => {
     entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
+        if (!entry.isIntersecting)
             navbar.style.opacity = 1;
-        } else {
+        else
             navbar.style.opacity = 0;
-        }
     });
 };
 
@@ -46,3 +51,17 @@ let observer = new IntersectionObserver(callback, options);
 
 let target = document.querySelector(".hero");
 observer.observe(target);
+
+// jokes api
+let requestURL = "https://v2.jokeapi.dev/joke/Programming?type=single&amount=1&blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+const request = new XMLHttpRequest();
+
+request.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        const joke = JSON.parse(request.responseText).joke;
+        document.getElementById("joke").innerHTML = joke;
+    }
+};
+
+request.open("GET", requestURL, true);
+request.send();
