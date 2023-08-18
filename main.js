@@ -19,7 +19,7 @@ document.addEventListener("keypress", (e) => {
 });
 
 // age showcase thing
-
+/*
 let agespan = document.getElementById("age");
 let delta = new Date() - new Date(2009, 03, 20);
 
@@ -27,7 +27,7 @@ setInterval(() => {
     agespan.innerHTML = `${(delta / (1000 * 60 * 60 * 24 * 365)).toFixed("8")}`;
     delta += 100;
 }, 100);
-
+*/
 // floating navbar scroll effect
 
 let navbar = document.querySelector(".navbar");
