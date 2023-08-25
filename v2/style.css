@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Staatliches&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    position: absolute;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero > * {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 20vw;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000), color-stop(0.25, #000), color-stop(1, transparent));
+    background-image: url("https://sanctuarymentalhealth.org/wp-content/uploads/2021/03/The-Starry-Night-1200x630-1.jpg");
+    background-size: cover;
+    color: #fff;
+}
+
+.content {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+.content > p {
+    font-size: 4vw;
+    color: white;
+}
