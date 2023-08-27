@@ -14,16 +14,50 @@ function newColourScheme() {
 }
 
 document.addEventListener("keypress", (e) => {
-    if (e.keyCode === 13) // enter
+    if (e.keyCode == 13) // enter
     newColourScheme()
 });
 
+// age showcase thing
+
+let agespan = document.getElementById("age");
+let delta = new Date() - new Date(2009, 03, 20);
+
+setInterval(() => {
+    agespan.innerHTML = `${(delta / (1000 * 60 * 60 * 24 * 365)).toFixed("8")}`;
+    delta += 100;
+}, 100);
+
+// floating navbar scroll effect
+
+let navbar = document.querySelector(".navbar");
+
+let callback = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting)
+            navbar.style.opacity = 1;
+        else
+            navbar.style.opacity = 0;
+    });
+};
+
+let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.35,
+};
+
+let observer = new IntersectionObserver(callback, options);
+
+let target = document.querySelector(".hero");
+observer.observe(target);
+
 // jokes api
-const requestURL = "https://v2.jokeapi.dev/joke/Programming?type=single&amount=1&blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+let requestURL = "https://v2.jokeapi.dev/joke/Programming?type=single&amount=1&blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 const request = new XMLHttpRequest();
 
 request.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
+    if (this.readyState == 4 && this.status == 200) {
         const joke = JSON.parse(request.responseText).joke;
         document.getElementById("joke").innerHTML = joke;
     }
