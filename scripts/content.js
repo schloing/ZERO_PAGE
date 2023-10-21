@@ -1,6 +1,6 @@
 // retrieve content form content/
 
-fetch("/content/content.json")
+fetch("./content/content.json")
     .then(response => response.json())
     .then(data => begin(data));
 
@@ -22,7 +22,7 @@ function begin(data) {
 
     function load(article) {
         console.log("loading " + article);
-        fetch(`/content/${article}`)
+        fetch(`./content/${article}`)
             .then(response => response.text())
             .then(plaintext => content_html.innerHTML = plaintext);
     }
