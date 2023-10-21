@@ -1,6 +1,6 @@
 // retrieve content form content/
 
-fetch("../content/content.json")
+fetch("/content/content.json")
     .then(response => response.json())
     .then(data => begin(data));
 
