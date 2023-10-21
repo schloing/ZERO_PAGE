@@ -168,6 +168,8 @@ li {
 
 li > a {
     color: var(--accent-colour);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #age, .special {

@@ -5,7 +5,8 @@ fetch("../content/content.json")
     .then(data => begin(data));
 
 function begin(data) {
-    const content_area = document.querySelector(".sidebar-content");
+    const content_list = document.querySelector(".sidebar-content");
+    const content_html = document.querySelector(".content");
 
     function section_template() {
         const container = {
@@ -20,9 +21,10 @@ function begin(data) {
     }
 
     function load(article) {
+        console.log("loading " + article);
         fetch(`../content/${article}`)
             .then(response => response.text())
-            .then(plaintext => console.log(plaintext));
+            .then(plaintext => content_html.innerHTML = plaintext);
     }
 
     // <div class="recent">
@@ -42,13 +44,22 @@ function begin(data) {
             let list_item = document.createElement("li");
             let inner = document.createElement("a");
 
-            inner.href = load(article.relative);
+            inner.onclick = partial(load, article.relative);
             inner.innerText = article.title;
 
             list_item.appendChild(inner);
             template.main.appendChild(list_item);
         });
 
-        content_area.appendChild(template.main);
+        content_list.appendChild(template.main);
     });
+}
+
+function partial(func /*, 0..n args */) {
+    var args = Array.prototype.slice.call(arguments).splice(1);
+    
+    return function () {
+        var allArguments = args.concat(Array.prototype.slice.call(arguments));
+        return func.apply(this, allArguments);
+    };
 }
