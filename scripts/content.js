@@ -22,7 +22,7 @@ function begin(data) {
 
     function load(article) {
         console.log("loading " + article);
-        fetch(`../content/${article}`)
+        fetch(`/content/${article}`)
             .then(response => response.text())
             .then(plaintext => content_html.innerHTML = plaintext);
     }
