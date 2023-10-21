@@ -2,32 +2,32 @@
     "articles": {
         "recent": [
             {
-                "title": "zero_page",
-                "relative": "zero_page.html",
+                "title": "markdown load test",
+                "relative": "load_test.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "why is c so fun to write in?",
-                "relative": "cfun.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "why are there no* optical computers?",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "on the safety of wireless networks",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "tracking celestial objects",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             }
@@ -35,25 +35,25 @@
         "misc": [
             {
                 "title": "chasm, chasm2, and what i have learnt",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "mos6502 - the emulation",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "d4t4b4s3, apis, and webservers",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             },
             {
                 "title": "robustness of socket webservers?",
-                "relative": "zero_page.html",
+                "relative": "content.html",
                 "upload": "31/12/23",
                 "edits": 0
             }
