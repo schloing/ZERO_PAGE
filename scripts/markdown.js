@@ -1,0 +1,1 @@
+// render markdown retrieved from content/
