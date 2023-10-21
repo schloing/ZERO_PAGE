@@ -139,6 +139,7 @@ a,
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
+    gap: 2rem;
 }
 
 @media only screen and (max-width: 1180px) {
