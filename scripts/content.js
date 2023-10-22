@@ -21,7 +21,8 @@ function begin(data) {
     }
 
     function load(article) {
-        console.log("loading " + article);
+        content_html.innerHTML = `loading ${article}`;
+        
         fetch(`./content/${article}`)
             .then(response => response.text())
             .then(plaintext => content_html.innerHTML = plaintext);
