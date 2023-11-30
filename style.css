@@ -167,7 +167,7 @@ li {
     list-style-type: none;
 }
 
-a {
+a:not(.badge > a, .navbar  > a) {
     color: var(--accent-colour);
     text-decoration: underline;
     cursor: pointer;
